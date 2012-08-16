@@ -1,0 +1,17 @@
+<F3:include href="common/header.html" />
+		<div class="container">
+			<form class="well form-inline" action="{{@WEB_ROOT}}" method="post">
+			  <input type="text" class="input-small" placeholder="Email" name="usr">
+			  <input type="password" class="input-small" placeholder="Password" name="pwd">
+			  <label class="checkbox">
+			    <input type="checkbox"> Remember me
+			  </label>
+			  <button type="submit" class="btn">Sign in</button>
+			  <F3:check if="{{@login_status=='false'}}">
+			  	<F3:true>
+			  		<span>Inserted if condition is false</span>
+			  	</F3:true>
+			  </F3:check>
+			</form>
+		</div><!-- Container -->
+<F3:include href="common/footer.html" />
